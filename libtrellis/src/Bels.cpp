@@ -1042,7 +1042,7 @@ namespace MachXO2Bels {
         graph.add_bel_output(bel, graph.ident("CLKINTFB"), x, y, graph.ident("CLKINTFB_PLL"));
         add_output("DPHSRC");
         for (int i=0;i<8;i++)
-            graph.add_bel_output(bel, graph.ident(fmt("PLLDATO" << i )), x, y, graph.ident(fmt("JPLLDATI" << i << "_PLL")));
+            graph.add_bel_output(bel, graph.ident(fmt("PLLDATO" << i )), x, y, graph.ident(fmt("JPLLDATO" << i << "_PLL")));
         add_output("PLLACK");
 
 
