@@ -464,7 +464,7 @@ shared_ptr<RoutingGraph> Chip::get_routing_graph_machxo2(bool include_lutperm_pi
             MachXO2Bels::add_pllrefrc(*rg, "R", x-1, y+1);
         }
         // Config/system Bels
-        if (tile->info.type == "CFG0") {
+        if (tile->info.type == "CFG0" || tile->info.type == "CFG0_ENDL") {
             MachXO2Bels::add_misc(*rg, is_xo3 ? "EFBB" : "EFB", x, y+1);
             MachXO2Bels::add_misc(*rg, "GSR", x, y+1);
             MachXO2Bels::add_misc(*rg, "JTAGF", x,y+1);
