@@ -450,7 +450,7 @@ shared_ptr<RoutingGraph> Chip::get_routing_graph_machxo2(bool include_lutperm_pi
             MachXO2Bels::add_ioclk_bel(*rg, "DLLDELC", "R", x, y, 0);
         
         // RAM Bels
-        if (tile->info.type == "EBR0" || tile->info.type == "EBR0_END" ||
+        if (tile->info.type == "EBR0" || tile->info.type == "EBR0_END" || tile->info.type == "EBR0_640" ||
             tile->info.type == "EBR0_10K" || tile->info.type == "EBR0_END_10K")
             MachXO2Bels::add_bram(*rg, x, y);
 
